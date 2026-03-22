@@ -285,6 +285,22 @@ const Certifications = () => {
 const Projects = () => {
     const projects = [
         {
+            title: "Real-Time Sudoku Game",
+            subtitle: "C++ & DSA Implementation",
+            date: "2024",
+            desc: "Engineered a high-performance Sudoku game utilizing advanced Data Structures and Algorithms in C++. Integrated optimized backtracking algorithms for immediate puzzle resolution, grid generation, and real-time validation capabilities.",
+            tags: ["C++", "DSA", "Algorithms", "Backtracking"],
+            color: "from-accent-violet to-accent-fuchsia"
+        },
+        {
+            title: "Amazon Prime Video Content Analysis",
+            subtitle: "Power BI Dashboard",
+            date: "Feb 2025 - Apr 2025",
+            desc: "Developed an interactive Power BI dashboard to analyze Amazon Prime Video content. Examined content distribution, audience ratings, genre trends, geographic availability, and yearly growth patterns to generate actionable insights.",
+            tags: ["Power BI", "Data Visualization", "Data Analysis"],
+            color: "from-accent-cyan to-accent-blue"
+        },
+        {
             title: "Border Crossing Analysis",
             subtitle: "Interactive Excel Dashboard",
             date: "Apr 2025",
