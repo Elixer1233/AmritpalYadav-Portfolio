@@ -13,16 +13,16 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Education', href: '#education' },
         { name: 'Expertise', href: '#expertise' },
-        { name: 'Work', href: '#projects' },
+        { name: 'Projects', href: '#projects' },
         { name: 'Certs', href: '#certifications' },
-        { name: 'Contact', href: '#contact' }
+        { name: 'Activities', href: '#activities' }
     ];
 
     return (
         <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'glass py-4' : 'bg-transparent py-6'}`}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <a href="#" className="text-3xl font-display font-bold tracking-tighter text-white hover:text-accent-cyan transition-colors">
-                    Amrit<span className="text-accent-violet">.</span>
+                    Amritpal Yadav<span className="text-accent-violet">.</span>
                 </a>
                 <div className="hidden md:flex items-center space-x-8">
                     {navLinks.map((link) => (
@@ -88,16 +88,7 @@ const Hero = () => {
                 <div className="relative hidden lg:block">
                     <div className="absolute inset-0 bg-gradient-to-tr from-accent-cyan/20 to-accent-violet/20 blur-3xl rounded-full"></div>
                     <div className="relative glass-card border-none rounded-[2.5rem] p-4 animate-float-slow">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Data Analytics" className="rounded-[2rem] w-full h-[600px] object-cover mix-blend-overlay opacity-80" />
-                        <div className="absolute bottom-10 left-10 right-10 glass rounded-2xl p-6">
-                            <div className="flex items-center gap-4 text-white">
-                                <i className="fas fa-award text-3xl text-accent-fuchsia"></i>
-                                <div>
-                                    <h4 className="font-bold text-lg font-display tracking-tight">Karate Gold Medalist</h4>
-                                    <p className="text-sm text-slate-400">National & District level (2017-2018)</p>
-                                </div>
-                            </div>
-                        </div>
+                        <img src="/professional_photo.jpg" alt="Amritpal Yadav" className="rounded-[2rem] w-full h-[600px] object-cover shadow-[0_0_30px_rgba(0,242,254,0.15)]" />
                     </div>
                 </div>
             </div>
@@ -106,15 +97,42 @@ const Hero = () => {
 };
 
 const About = () => {
+    const hobbies = [
+        'Trekking', 
+        'Reading', 
+        'Surfing', 
+        'Digital research on current trends and topics', 
+        'Weightlifting'
+    ];
+
     return (
         <section id="about" className="py-24 relative z-10">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-6 space-y-12">
+                
+                <div className="glass-card rounded-[3rem] p-10 md:p-14 border-l-4 border-l-accent-fuchsia">
+                    <h2 className="text-sm font-bold tracking-widest text-accent-fuchsia uppercase mb-4">Interests</h2>
+                    <h3 className="text-3xl md:text-4xl font-display font-bold text-white tracking-tighter mb-8">
+                        Beyond academics, I engage in...
+                    </h3>
+                    <ul className="grid md:grid-cols-2 gap-6">
+                        {hobbies.map((hobby, idx) => (
+                            <li key={idx} className="flex items-start md:items-center gap-4 text-lg text-slate-300 font-light group">
+                                <div className="w-10 h-10 shrink-0 rounded-full glass flex items-center justify-center text-accent-fuchsia group-hover:bg-accent-fuchsia group-hover:text-dark-950 transition-colors shadow-[0_0_15px_rgba(240,47,194,0.15)] mt-1 md:mt-0">
+                                    <i className="fas fa-check"></i>
+                                </div>
+                                <span className="group-hover:text-white transition-colors">{hobby}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
                 <div className="glass-card rounded-[3rem] p-10 md:p-14 text-center">
                     <h2 className="text-sm font-bold tracking-widest text-accent-cyan uppercase mb-6">Philosophy</h2>
                     <h3 className="text-3xl md:text-5xl font-display font-bold text-white tracking-tighter leading-tight max-w-4xl mx-auto">
                         "I believe in diligent work, adaptability, and continuous learning. Driven by curiosity, I thrive in environments where data-centric problem-solving is at the core."
                     </h3>
                 </div>
+
             </div>
         </section>
     );
@@ -137,8 +155,8 @@ const Education = () => {
                         <div className="w-[calc(100%-4rem)] ml-auto md:w-[calc(50%-3rem)] md:ml-0 glass-card p-8 rounded-3xl transition-transform">
                             <div className="text-accent-cyan font-bold text-sm tracking-widest uppercase mb-2">Aug '23 - Present</div>
                             <h4 className="text-2xl font-display font-bold text-white mb-2">B.Tech Computer Science</h4>
-                            <p className="text-slate-300 font-medium mb-3">Lovely Professional University, Jalandhar</p>
-                            <span className="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm font-mono text-slate-300">CGPA: 6.02</span>
+                            <p className="text-slate-300 font-medium mb-3">Lovely Professional University, Phagwara</p>
+                            <span className="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm font-mono text-slate-300">CGPA: 6.29</span>
                         </div>
                     </div>
                     
@@ -150,6 +168,17 @@ const Education = () => {
                             <h4 className="text-2xl font-display font-bold text-white mb-2">Higher Secondary</h4>
                             <p className="text-slate-300 font-medium mb-3">Army Public School, Lucknow</p>
                             <span className="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm font-mono text-slate-300">Score: 79.6%</span>
+                        </div>
+                    </div>
+
+                    {/* Timeline Item 3 */}
+                    <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-dark-950 bg-accent-violet absolute left-0 md:left-1/2 -translate-x-1/2 shadow-[0_0_15px_rgba(138,43,226,0.5)] z-10 transition-transform group-hover:scale-125"></div>
+                        <div className="w-[calc(100%-4rem)] ml-auto md:w-[calc(50%-3rem)] md:ml-0 glass-card p-8 rounded-3xl transition-transform">
+                            <div className="text-accent-violet font-bold text-sm tracking-widest uppercase mb-2">2020 - 2021</div>
+                            <h4 className="text-2xl font-display font-bold text-white mb-2">Secondary (Class X)</h4>
+                            <p className="text-slate-300 font-medium mb-3">Army Public School, Lucknow</p>
+                            <span className="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm font-mono text-slate-300">Score: 89.6%</span>
                         </div>
                     </div>
                     
@@ -317,6 +346,76 @@ const Projects = () => {
     );
 };
 
+const ExtraCurriculars = () => {
+    const activities = [
+        {
+            title: "Yuva Aapda Mitra Scheme",
+            subtitle: "Government of India",
+            date: "Certified First Responder",
+            desc: "Trained in disaster response and rescue. Recognized as a First Responder capable of handling emergency situations and providing immediate assistance.",
+            icon: "fas fa-medkit",
+            color: "text-accent-cyan"
+        },
+        {
+            title: "NCC Health Run Medalist",
+            subtitle: "National Cadet Corps",
+            date: "Sept 2025",
+            desc: "Secured a medal by ranking within the top 100 out of 10,000 participants in the national health run.",
+            icon: "fas fa-running",
+            color: "text-accent-blue"
+        },
+        {
+            title: "Air Force NCC CATC",
+            subtitle: "23 Air Force NCC, Ropar",
+            date: "Sept 2025",
+            desc: "Successfully completed the Combined Annual Training Camp (CATC) under the esteemed Air Force NCC wing.",
+            icon: "fas fa-plane",
+            color: "text-accent-fuchsia"
+        },
+        {
+            title: "Karate Gold Medalist",
+            subtitle: "National, State & District Championships",
+            date: "Apr 2018 - Oct 2018",
+            desc: "Secured Gold medals across multiple massive competitive levels showcasing extreme discipline and physical prowess.",
+            icon: "fas fa-medal",
+            color: "text-accent-violet"
+        }
+    ];
+
+    return (
+        <section id="activities" className="py-32 relative z-10">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="mb-20">
+                    <h2 className="text-sm font-bold tracking-widest text-accent-cyan uppercase mb-4">Beyond Academics</h2>
+                    <h3 className="text-4xl md:text-6xl font-display font-bold text-white tracking-tighter">Extra-Curriculars</h3>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-8">
+                    {activities.map((act, idx) => (
+                        <div key={idx} className="glass-card p-6 md:p-8 rounded-[2rem] flex flex-col sm:flex-row shadow-[0_4px_30px_rgba(0,0,0,0.5)] gap-6 group hover:-translate-y-2 transition-transform">
+                            <div className={`w-16 h-16 shrink-0 rounded-2xl glass flex items-center justify-center border-white/10 ${act.color} text-2xl group-hover:bg-white/5 transition-colors`}>
+                                <i className={act.icon}></i>
+                            </div>
+                            <div>
+                                <h4 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-accent-cyan transition-colors">{act.title}</h4>
+                                <div className="flex justify-between items-center mb-4 flex-wrap gap-2 text-xs font-mono">
+                                    <span className="text-slate-400 font-bold tracking-widest uppercase">{act.subtitle}</span>
+                                    <span className="px-2 py-1 bg-dark-900 border border-white/5 rounded text-slate-500">{act.date}</span>
+                                </div>
+                                <p className="text-slate-400 font-light leading-relaxed text-sm">
+                                    {act.desc}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+// Removed standalone BeyondAcademics block
+
 const Contact = () => {
     const form = useRef();
     const [status, setStatus] = useState(''); // '', 'sending', 'success', 'error'
@@ -425,7 +524,7 @@ const Contact = () => {
 const Footer = () => {
     return (
         <footer className="py-10 border-t border-white/5 text-center">
-            <h2 className="text-2xl font-display font-bold text-white mb-4">Amrit.</h2>
+            <h2 className="text-2xl font-display font-bold text-white mb-4">Amritpal Yadav.</h2>
             <div className="flex justify-center gap-6 mb-8 text-slate-500">
                 <a href="https://github.com/Elixer1233" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><i className="fab fa-github text-xl"></i></a>
                 <a href="https://linkedin.com/in/amrit-yadav-b8180" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><i className="fab fa-linkedin text-xl"></i></a>
@@ -446,6 +545,7 @@ export default function App() {
                 <Expertise />
                 <Certifications />
                 <Projects />
+                <ExtraCurriculars />
                 <Contact />
             </main>
             <Footer />
